@@ -37,8 +37,10 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "accounts",
     "tailwind",
+    "crispy_forms",
+    "crispy_tailwind",
+    "accounts",
     "theme",
     "pages",
 ]
@@ -136,3 +138,7 @@ AUTH_USER_MODEL = "accounts.CustomUser"
 # Redirect Login and Logout
 LOGIN_REDIRECT_URL = "home"
 LOGOUT_REDIRECT_URL = "home"
+
+# Crispy Form Template Packs
+CRISPY_ALLOWED_TEMPLATE_PACKS = "tailwind"
+CRISPY_TEMPLATE_PACK = "tailwind"
