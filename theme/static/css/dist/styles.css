@@ -10,8 +10,6 @@
       "Courier New", monospace;
     --color-slate-100: oklch(96.8% 0.007 247.896);
     --color-slate-300: oklch(86.9% 0.022 252.894);
-    --color-slate-500: oklch(55.4% 0.046 257.417);
-    --color-slate-600: oklch(44.6% 0.043 257.281);
     --color-slate-700: oklch(37.2% 0.044 257.287);
     --color-slate-800: oklch(27.9% 0.041 260.031);
     --color-slate-900: oklch(20.8% 0.042 265.755);
@@ -542,6 +540,9 @@
   .mx-auto {
     margin-inline: auto;
   }
+  .mt-4 {
+    margin-top: calc(var(--spacing) * 4);
+  }
   .status {
     display: inline-block;
     aspect-ratio: 1 / 1;
@@ -643,12 +644,6 @@
     box-shadow: none;
     background-image: none;
   }
-  .card-actions {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    gap: calc(0.25rem * 2);
-  }
   .card-title {
     display: flex;
     align-items: center;
@@ -662,9 +657,6 @@
   .flex {
     display: flex;
   }
-  .h-full {
-    height: 100%;
-  }
   .h-screen {
     height: 100vh;
   }
@@ -676,9 +668,6 @@
   }
   .flex-col {
     flex-direction: column;
-  }
-  .flex-row {
-    flex-direction: row;
   }
   .items-center {
     align-items: center;
@@ -695,9 +684,6 @@
   .gap-4 {
     gap: calc(var(--spacing) * 4);
   }
-  .rounded {
-    border-radius: 0.25rem;
-  }
   .rounded-lg {
     border-radius: var(--radius-lg);
   }
@@ -709,17 +695,11 @@
     color: var(--color-info-content);
     --alert-color: var(--color-info);
   }
-  .bg-accent {
-    background-color: var(--color-accent);
-  }
   .bg-gray-50 {
     background-color: var(--color-gray-50);
   }
   .bg-slate-100 {
     background-color: var(--color-slate-100);
-  }
-  .bg-slate-800 {
-    background-color: var(--color-slate-800);
   }
   .bg-slate-900 {
     background-color: var(--color-slate-900);
@@ -735,6 +715,9 @@
   }
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
+  }
+  .text-center {
+    text-align: center;
   }
   .font-serif {
     font-family: var(--font-serif);
@@ -866,9 +849,9 @@
     --btn-color: var(--color-info);
     --btn-fg: var(--color-info-content);
   }
-  .btn-primary {
-    --btn-color: var(--color-primary);
-    --btn-fg: var(--color-primary-content);
+  .btn-success {
+    --btn-color: var(--color-success);
+    --btn-fg: var(--color-success-content);
   }
   @media (prefers-color-scheme: dark) {
     .dark\:rounded-lg {
@@ -888,16 +871,6 @@
   @media (prefers-color-scheme: dark) {
     .dark\:text-slate-300 {
       color: var(--color-slate-300);
-    }
-  }
-  @media (prefers-color-scheme: dark) {
-    .dark\:text-slate-500 {
-      color: var(--color-slate-500);
-    }
-  }
-  @media (prefers-color-scheme: dark) {
-    .dark\:outline-slate-600 {
-      outline-color: var(--color-slate-600);
     }
   }
 }

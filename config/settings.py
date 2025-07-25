@@ -142,3 +142,6 @@ LOGOUT_REDIRECT_URL = "home"
 # Crispy Form Template Packs
 CRISPY_ALLOWED_TEMPLATE_PACKS = "tailwind"
 CRISPY_TEMPLATE_PACK = "tailwind"
+
+# Testing Only Email Server
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
